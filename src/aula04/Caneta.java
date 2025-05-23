@@ -6,6 +6,13 @@ public class Caneta {
     protected int carga;
     protected boolean tampada;
 
+    public Caneta(String m, String c, float p) { // este é o método construtor
+        this.modelo = m;
+        this.cor = c;
+        this.ponta = p;
+        this.tampar();
+    }
+
 
     public String getModelo() {
         return this.modelo;
@@ -21,6 +28,14 @@ public class Caneta {
 
     public void setPonta(float p) {
         this.ponta = p;
+    }
+
+    public void tampar(){
+        this.tampada = true;
+    }
+    
+    public void destampar(){
+        this.tampada = false;
     }
 
     // private void status() {
