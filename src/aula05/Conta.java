@@ -14,21 +14,23 @@
 
 package aula05;
 
-public class Conta {
+public final class Conta {
     public int numConta;
     protected String tipo;
     private String dono;
     private float saldo;
     private boolean status;
 
-    // public Conta(String d, float m, boolean s, String t, int n) {
-    //     this.dono = d;
-    //     this.saldo = m;
-    //     this.status = s;
-    //     this.tipo = t;
-    //     this.numConta = n;
-    // }
     
+    public void estadoAtual() {
+        System.out.println("Conta: " + this.getnumConta());
+        System.out.println("Dono: " + this.getDono());
+        System.out.println("Saldo: " + this.getSaldo());
+        System.out.println("Tipo de conta: " + this.getTipo());
+        if(this.getStatus()) {System.out.println("Sua conta está aberta!");}
+        else {System.out.println("Sua conta está fechada");}
+
+    }
 
     public void abrirConta(String t) {
         this.setStatus(true);
