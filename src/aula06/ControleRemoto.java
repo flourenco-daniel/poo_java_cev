@@ -12,9 +12,12 @@ public class ControleRemoto implements Controlador {
     }
 
     public void Status(){
-        this.volume = getVolume();
-        this.ligado = getLigado();
-        this.tocando = getTocando();
+        System.out.println("Volume: " + this.getVolume());
+        if (getLigado()) {
+            System.out.println("A TV está ligada.");
+        } else {System.out.println("A TV está desligada");
+    }
+        System.out.println(this.getTocando());
 
     }
 
