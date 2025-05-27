@@ -4,7 +4,7 @@ public class Caneta {
     public String cor;
     private float ponta; //o privado não deixa eu alterar o atributo quando eu for utilizar este objeto. Só posso alterar o atributo por aqui
     protected int carga;
-    protected boolean tampada;
+    protected boolean tampada; 
 
     public Caneta(String m, String c, float p) { // este é o método construtor
         this.modelo = m;
