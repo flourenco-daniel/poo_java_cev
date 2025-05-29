@@ -106,7 +106,7 @@ public class Lutador {
         return this.categoria;
     }
 
-    public void setCategoria(){
+    private void setCategoria(){
         if(this.peso < 52.2) {
             this.categoria = "Inválido";
         } else if(this.peso >= 52.2 && this.peso <= 70.3) {
