@@ -1,6 +1,6 @@
 package aula07;
 
-public class Lutador {
+public final class Lutador {
     private String nome;
     private String nacionalidade;
     private int idade;
@@ -13,15 +13,15 @@ public class Lutador {
 
     //método construtor
 
-    public Lutador(String no, String na, int id, int al, float pe, int vi, int de, int em) {
-        setNome(no);
-        setNacionalidade(na);
-        setIdade(id);
-        setAltura(al);
-        setPeso(pe);
-        setVitorias(vi);
-        setEmpates(em);
-        setDerrotas(de);
+    public Lutador(String nome, String nacionalidade, int idade, int altura, float peso, int vitorias, int derrotas, int empates) {
+        setNome(nome);
+        setNacionalidade(nacionalidade);
+        setIdade(idade);
+        setAltura(altura);
+        setPeso(peso);
+        setVitorias(vitorias);
+        setEmpates(empates);
+        setDerrotas(derrotas);
 
     }
 
@@ -65,40 +65,40 @@ public class Lutador {
         return this.nome;
     }
 
-    public void setNome(String no){
-        this.nome = no;
+    public void setNome(String nome){
+        this.nome = nome;
     }
 
     public int getIdade(){
         return this.idade;
     }
 
-    public void setIdade(int id){
-        this.idade = id;
+    public void setIdade(int idade){
+        this.idade = idade;
     }
 
     public int getAltura(){
         return this.altura;
     }
 
-    public void setAltura(int al){
-        this.altura = al;
+    public void setAltura(int altura){
+        this.altura = altura;
     }
 
     public String getNacionalidade(){
         return this.nacionalidade;
     }
 
-    public void setNacionalidade(String na){
-        this.nacionalidade = na;
+    public void setNacionalidade(String nacionalidade){
+        this.nacionalidade = nacionalidade;
     }
 
     public float getPeso(){
         return this.peso;
     }
 
-    public void setPeso(float pe){
-        this.peso = pe;
+    public void setPeso(float peso){
+        this.peso = peso;
         this.setCategoria();
     }
 
@@ -123,24 +123,24 @@ public class Lutador {
         return this.vitorias;
     }
 
-    public void setVitorias(int vi){
-        this.vitorias = vi;
+    public void setVitorias(int vitorias){
+        this.vitorias = vitorias;
     }
 
     public int getEmpates(){
         return this.empates;
     }
 
-    public void setEmpates(int em){
-        this.empates = em;
+    public void setEmpates(int empates){
+        this.empates = empates;
     }
 
     public int getDerrotas(){
         return this.derrotas;
     }
 
-    public void setDerrotas(int de){
-        this.derrotas = de;
+    public void setDerrotas(int derrotas){
+        this.derrotas = derrotas;
     }
 }
 

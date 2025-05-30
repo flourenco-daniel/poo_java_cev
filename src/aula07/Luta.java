@@ -14,10 +14,12 @@ public class Luta {
             this.setAprovado(true);
             this.setDesafiado(l1);
             this.setDesafiante(l2);
+            System.out.println("A luta foi marcada!");
         } else {
             this.setAprovado(false);
             this.setDesafiado(null);
             this.setDesafiante(null);
+            System.out.println("A luta não pode ser marcada.");
         }
     }
 
@@ -27,24 +29,25 @@ public class Luta {
             this.getDesafiado().apresentar();
             System.out.println("### DESAFIANTE ###");
             this.getDesafiante().apresentar();
+            System.out.println("\r\n ____ \r\n \r\n Vamos começar a luta: \r\n");
 
             Random aleatorio = new Random();
             int vencedor = aleatorio.nextInt(3); // 0 1 2
             switch(vencedor) {
             case 0 -> {
                 System.out.println("Empatou!");
-                this.desafiado.empatarLuta();
-                this.desafiado.empatarLuta();
+                this.getDesafiado().empatarLuta();
+                this.getDesafiante().empatarLuta();
                 }
             case 1 -> {
-                System.out.println("Vitória do: " + this.desafiado);
-                this.desafiado.ganharLuta();
-                this.desafiante.perderLuta();
+                System.out.println("Vitória do: " + this.getDesafiado().getNome());
+                this.getDesafiado().ganharLuta();
+                this.getDesafiante().perderLuta();
                 }
             case 2 -> {
-                System.out.println("Vitória do: " + this.desafiante);
-                this.desafiado.perderLuta();
-                this.desafiante.ganharLuta();
+                System.out.println("Vitória do: " + this.getDesafiante().getNome());
+                this.getDesafiado().perderLuta();
+                this.getDesafiante().ganharLuta();
                 }
         }
     }
