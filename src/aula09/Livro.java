@@ -1,6 +1,8 @@
 package aula09;
 
-public class Livro {
+import java.util.Random;
+
+public final class Livro implements Publicacao {
 
     private String titulo;
     private String autor;
@@ -9,7 +11,28 @@ public class Livro {
     private boolean aberto;
     private Pessoa leitor;
 
+    public Livro (String titulo, String autor, int totalPaginas, Pessoa leitor){
+        setTitulo(titulo);
+        setAutor(autor);
+        setTotalPaginas(totalPaginas);
+        setLeitor(leitor);
+        setPagAtual(1);
+        setAberto(false);
+    }
+
     public void detalhes() {
+        System.out.println("Título do livro: " + this.getTitulo());
+        System.out.println("Autor: " + this.getAutor());
+        System.out.println("Páginas: " + this.getTotalPaginas());
+        if(this.getAberto()) {
+            System.out.println("O livro está aberto na página " + this.getPagAtual());
+        }
+        else System.out.println("O livro está fechado.");
+        System.out.println("Nome do leitor: " + this.getLeitor().getNome());
+        System.out.println("Idade do leitor: " + this.getLeitor().getIdade());
+        System.out.println("Sexo do leitor: " + this.getLeitor().getSexo());
+
+
 
     }
 
@@ -59,6 +82,34 @@ public class Livro {
 
     public void setLeitor(Pessoa leitor) {
         this.leitor = leitor;
+    }
+
+    @Override
+    public void abrir() {
+        setAberto(true);
+
+    }
+
+    @Override
+    public void fechar() {
+        setAberto(false);
+
+    }
+
+    @Override
+    public void folhear() {
+        Random aleatorio = new Random();
+        this.setPagAtual(aleatorio.nextInt(this.getTotalPaginas()));
+    }
+
+    @Override
+    public void avançarPag() {
+        this.setPagAtual(this.getPagAtual() + 1);
+    }
+
+    @Override
+    public void voltarPag() {
+        this.setPagAtual(this.getPagAtual() - 1);
     }
     
 }

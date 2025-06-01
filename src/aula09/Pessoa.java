@@ -1,12 +1,19 @@
 package aula09;
 
-public class Pessoa {
+public final class Pessoa {
     private String nome;
     private int idade;
     private String sexo;
 
+    public Pessoa(String nome, int idade, String sexo){
+        setNome(nome);
+        setIdade(idade);
+        setSexo(sexo);
+    }
+
     public void fazerAniver(){
-        this.setIdade(this.getIdade() + 1);
+        int idadeAtual = getIdade();
+        this.setIdade(idadeAtual + 1);
     }
 
     public String getNome(){
