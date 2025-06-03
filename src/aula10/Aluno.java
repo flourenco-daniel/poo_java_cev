@@ -5,8 +5,21 @@ public class Aluno extends Pessoa { //tornei aluno filha de pessoa
     private String curso;
     private boolean ativo;
 
+    public void statusAluno(){
+        System.out.println("O nome do aluno é: " + this.getNome());
+        System.out.println("A idade do aluno é: " + this.getIdade());
+        System.out.println("O aluno se identifica como: " + this.getSexo());
+        System.out.println("Matrícula do aluno: " + this.getMatricula());
+        System.out.println("O curso do aluno é: " + this.getCurso());
+        if (getAtivo()) { 
+            System.out.println("A matrícula está ativa");
+        }
+        else {System.out.println("Matrícula inativa");
+    }
+    }
+
     public void cancelarMatricula(){
-        setAtivo(false);
+        this.setAtivo(false);
 
     }
 
