@@ -25,9 +25,5 @@ public class Aluno extends Pessoa{
         this.curso = curso;
     }
 
-        @Override
-    public String toString() {
-        return "Dados: " + "nome=" + nome + ", idade=" + idade + ", sexo=" + sexo + ", matricula=" + matricula + ", curso=" + curso;
-    }
-    
+
 }

@@ -15,7 +15,10 @@ public class Aula11 {
         a1.setSexo("M");
         a1.setCurso("Museologia");
         a1.setMatricula(420);
+        a1.PagarMensalidade();
 
-        System.out.println(a1.toString());
+        Bolsista b1 = new Bolsista();
+        b1.PagarMensalidade(); //esse método foi sobrescrito. portanto, ele não tem a mesma função do que quando o método é chamado para o objeto Aluno.
+
     }
 }

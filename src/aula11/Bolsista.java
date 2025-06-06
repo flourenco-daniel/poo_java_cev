@@ -18,6 +18,7 @@ public class Bolsista extends Aluno {
 
     @Override
     public void PagarMensalidade(){
+        System.out.println("Aluno bolsista. Não é possível pagar mensalidade");
 
     }
     
