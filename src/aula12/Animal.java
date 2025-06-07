@@ -9,6 +9,8 @@ public abstract class Animal {
 
     public abstract void alimentar();
 
+    public abstract void emitirSom();
+
     public float getPeso(){
         return this.peso;
     }
